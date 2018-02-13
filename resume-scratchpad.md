@@ -71,7 +71,8 @@ team productivity.
 
 #### April 2016 - February 2017
 
-- Collaborated on development of a web application using React/Redux and Node.js
+- Collaborated on development of a web application using React/Redux and a REST
+  API written in Node.js
 - Established a digital presence for client's brand with a responsive landing page
 - Set up clients with tools they needed yto achieve business goals such as domains, email, team chat and Google Voice
 
@@ -94,14 +95,20 @@ team productivity.
 
 - Responsive Web Design, including responsive images, typography and layout
 - Web accessibility
-- Build automation with Node.js tools (Gulp, Webpack)
-- Web development security best practices
-- 2 years experience with front end web development (React, Vue, jQuery, Bootstrap)
+- Animation and transitions using CSS
+- JS build automation for performance and compatibility (Gulp, Webpack, ESLint,
+  Autoprefixer, Babel)
+- 2 years professional experience with front end web development (React, Vue, jQuery, Bootstrap)
 - Back end web development (Express, Ruby on Rails, WordPress, Java)
 - Comfortable with functional programming paradigms
-- 6 years experience using UNIX command line tools including vim & git
+- 6 years experience using UNIX command line tools
 - Strong understanding of the CSS Box Model, floats & clearfixes, flexbox
 - Always learning new web development tech, currently learning CSS Grid
+- Strong with git
+- Core networking fundamentals from network level to application server
+- Managing Apache servers with Plesk, CPanel and from the CLI
+- Adobe Creative Suite (Photoshop, Illustrator)
+- Sketch
 
 ## Programming Languages
 
