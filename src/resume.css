@@ -38,38 +38,6 @@ ul {
 	padding: 0 1.5rem;
 }
 
-/* Browser support */
-@supports (display: grid) {
-	.grid-not-supported {
-		display: none;
-	}
-}
-.grid-not-supported {
-	font-family: var(--font-stack-source-sans-pro);
-	text-align: center;
-	padding: 1.25rem;
-}
-.grid-not-supported h1 {
-	color: var(--color-red);
-}
-.grid-not-supported p {
-	font-family: var(--font-stack-source-sans-pro);
-	margin: 0 auto 1em auto;
-	width: 100%;
-	max-width: 460px;
-	text-align: left;
-}
-.grid-not-supported ul {
-	list-style: none;
-	text-align: left;
-	max-width: fit-content;
-	max-width: -moz-fit-content;
-	margin: 0 auto;
-}
-.grid-not-supported ul li {
-	margin: 0.5em 0;
-}
-
 /* Resume styles*/
 
 main.resume {
@@ -93,7 +61,7 @@ header.contact a {
 .grid-2col {
 	grid-template-columns: calc(50% - 20px) auto;
 	grid-template-rows: 50% 50%;
-	grid-column-gap: 20px;
+	grid-column-gap: 80px;
 	max-width: 1200px;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -138,11 +106,13 @@ section.programming-languages {
 .inline-list li:not(:last-of-type)::after {
 	display: inline-block;
 	content: ", ";
-	margin-right: 4px;
+	margin-right: 0.5em;
 }
 
-.edu-list li:first-child::after {
-	content: ": ";
+.edu-list li:not(:last-of-type)::after {
+	display: inline-block;
+	content: ", ";
+	margin-right: 0.5em;
 }
 
 .skills-list {
@@ -199,9 +169,6 @@ a:visited {
 }
 
 @media print {
-	.browser-warnings {
-		display: none;
-	}
 	html {
 		font-size: 12px;
 	}
