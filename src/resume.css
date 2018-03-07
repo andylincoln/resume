@@ -2,26 +2,27 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  --color-black: #000000;
-  --color-blue: #0054a3;
-  --color-red: #da1010;
-  --font-stack-source-sans-pro: "Source Sans Pro", "Open Sans", "Roboto", sans-serif;
+	--color-black: #000000;
+	--color-blue: #0054a3;
+	--color-red: #da1010;
+	--font-stack-source-sans-pro: "Source Sans Pro", "Open Sans", "Roboto",
+		sans-serif;
 }
 
 html {
-  font-size: 100%;
-  font-family: var(--font-stack-source-sans-pro);
+	font-size: 100%;
+	font-family: var(--font-stack-source-sans-pro);
 }
 
 h1,
@@ -30,205 +31,209 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.25em 0;
+	margin: 0.25em 0;
 }
 
 ul {
-  padding: 0 1.25rem;
+	padding: 0 1.5rem;
 }
 
 /* Browser support */
 @supports (display: grid) {
-  .grid-not-supported {
-    display: none;
-  }
+	.grid-not-supported {
+		display: none;
+	}
 }
 .grid-not-supported {
-  font-family: var(--font-stack-source-sans-pro);
-  text-align: center;
-  padding: 1.25rem;
+	font-family: var(--font-stack-source-sans-pro);
+	text-align: center;
+	padding: 1.25rem;
 }
 .grid-not-supported h1 {
-  color: var(--color-red);
+	color: var(--color-red);
 }
 .grid-not-supported p {
-  font-family: var(--font-stack-source-sans-pro);
-  margin: 0 auto 1em auto;
-  width: 100%;
-  max-width: 460px;
-  text-align: left;
+	font-family: var(--font-stack-source-sans-pro);
+	margin: 0 auto 1em auto;
+	width: 100%;
+	max-width: 460px;
+	text-align: left;
 }
 .grid-not-supported ul {
-  list-style: none;
-  text-align: left;
-  max-width: fit-content;
-  max-width: -moz-fit-content;
-  margin: 0 auto;
+	list-style: none;
+	text-align: left;
+	max-width: fit-content;
+	max-width: -moz-fit-content;
+	margin: 0 auto;
 }
 .grid-not-supported ul li {
-  margin: 0.5em 0;
+	margin: 0.5em 0;
 }
 
 /* Resume styles*/
 
 main.resume {
-  display: grid;
+	display: grid;
 }
 header.contact {
-  text-align: center;
+	text-align: center;
 }
 div.phone-email {
-  max-width: 800px;
-  margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
 }
 header.contact label {
-  font-weight: bold;
+	font-weight: bold;
 }
 header.contact a {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 /* Grid Styles*/
 .grid-2col {
-  grid-template-columns: calc(50% - 20px) auto;
-  grid-template-rows: 50% 50%;
-  grid-column-gap: 20px;
-  max-width: 1200px;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+	grid-template-columns: calc(50% - 20px) auto;
+	grid-template-rows: 50% 50%;
+	grid-column-gap: 20px;
+	max-width: 1200px;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0 auto;
 }
 
 .work-exp h3 {
-  width: 100%;
+	width: 100%;
 }
 .work-exp ul {
-  max-width: 650px;
+	max-width: 650px;
 }
 .education h4,
 .work-exp h4 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  max-width: 600px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	max-width: 600px;
 }
 
 section.experience,
 section.education,
 section.skills,
 section.programming-languages {
-  grid-column: 1 / span 2;
+	grid-column: 1 / span 2;
 }
 
 .lang-list,
 .edu-list,
 .tools-list,
 .inline-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  list-style: none;
-  max-width: 600px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	list-style: none;
+	max-width: 600px;
 }
 .lang-list {
-  max-width: 460px;
+	max-width: 460px;
 }
 
 .inline-list li:not(:last-of-type)::after {
-  display: inline-block;
-  content: ", ";
-  margin-right: 4px;
+	display: inline-block;
+	content: ", ";
+	margin-right: 4px;
 }
 
 .edu-list li:first-child::after {
-  content: ": ";
+	content: ": ";
+}
+
+.skills-list {
+	column-count: 2;
 }
 
 @media screen and (min-width: 1024px) {
-  .grid-not-supported h1 {
-    font-size: 2rem;
-  }
-  .grid-not-supported ul li {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
-  .grid-2col section {
-    padding: 0 20px;
-  }
-  section.skills {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-  }
-  section.experience {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 4;
-  }
-  section.programming-languages {
-    grid-column: 2 / span 1;
-  }
-  section.experience {
-    grid-column: 1 / span 1;
-  }
-  section.education,
-  section.skills,
-  section.programming-languages,
-  section.hobbies {
-    grid-column: 2 / span 1;
-  }
+	.grid-not-supported h1 {
+		font-size: 2rem;
+	}
+	.grid-not-supported ul li {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+	.grid-2col section {
+		padding: 0 20px;
+	}
+	section.skills {
+		grid-column: 2 / span 1;
+		grid-row: 2 / span 1;
+	}
+	section.experience {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 4;
+	}
+	section.programming-languages {
+		grid-column: 2 / span 1;
+	}
+	section.experience {
+		grid-column: 1 / span 1;
+	}
+	section.education,
+	section.skills,
+	section.programming-languages,
+	section.hobbies {
+		grid-column: 2 / span 1;
+	}
 }
 
 a,
 a:link,
 a:visited {
-  color: var(--color-blue);
+	color: var(--color-blue);
 }
 
 @media screen and (min-width: 1024px) {
-  .grid-not-supported h1 {
-    font-size: 2rem;
-  }
-  .grid-not-supported ul li {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
+	.grid-not-supported h1 {
+		font-size: 2rem;
+	}
+	.grid-not-supported ul li {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
 }
 
 @media print {
-  .browser-warnings {
-    display: none;
-  }
-  html {
-    font-size: 12px;
-  }
-  .grid-not-supported h1 {
-    font-size: 2rem;
-  }
-  .grid-not-supported ul li {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
-  section.skills {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-  }
-  section.experience {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 6;
-  }
-  section.programming-languages {
-    grid-column: 2 / span 1;
-  }
-  section.programming-languages ul {
-    columns: 2;
-  }
-  section.experience {
-    grid-column: 1 / span 1;
-  }
+	.browser-warnings {
+		display: none;
+	}
+	html {
+		font-size: 12px;
+	}
+	.grid-not-supported h1 {
+		font-size: 2rem;
+	}
+	.grid-not-supported ul li {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+	section.skills {
+		grid-column: 2 / span 1;
+		grid-row: 2 / span 1;
+	}
+	section.experience {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 6;
+	}
+	section.programming-languages {
+		grid-column: 2 / span 1;
+	}
+	section.programming-languages ul {
+		columns: 2;
+	}
+	section.experience {
+		grid-column: 1 / span 1;
+	}
 
-  section.education,
-  section.skills,
-  section.programming-languages,
-  section.hobbies {
-    grid-column: 2 / span 1;
-  }
+	section.education,
+	section.skills,
+	section.programming-languages,
+	section.hobbies {
+		grid-column: 2 / span 1;
+	}
 }
