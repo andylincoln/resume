@@ -61,7 +61,7 @@ header.contact a {
 .grid-2col {
 	grid-template-columns: calc(50% - 20px) auto;
 	grid-template-rows: 50% 50%;
-	grid-column-gap: 80px;
+	grid-column-gap: 40px;
 	max-width: 1200px;
 	width: -moz-fit-content;
 	width: fit-content;
