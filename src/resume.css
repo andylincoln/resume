@@ -117,6 +117,7 @@ section.programming-languages {
 
 .skills-list {
 	column-count: 2;
+	column-gap: 40px;
 }
 
 @media screen and (min-width: 1024px) {
