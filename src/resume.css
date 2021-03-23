@@ -59,20 +59,19 @@ header.contact a {
 
 /* Grid Styles*/
 .grid-2col {
-	grid-template-columns: calc(50% - 20px) auto;
-	grid-template-rows: 50% 50%;
+	grid-auto-columns: 1fr 1fr;
+	grid-auto-rows: 1fr 1fr 1fr 1fr;
+	grid-auto-flow: column dense;
+	grid-template-columns: calc(1fr - 20px) auto;
 	grid-column-gap: 40px;
-	max-width: 1200px;
-	width: -moz-fit-content;
-	width: fit-content;
-	margin: 0 auto;
 }
 
 .work-exp h3 {
 	width: 100%;
 }
 .work-exp ul {
-	max-width: 650px;
+	max-width: 800px;
+	margin-bottom: 1rem;
 }
 .education h4,
 .work-exp h4 {
@@ -80,13 +79,6 @@ header.contact a {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	max-width: 600px;
-}
-
-section.experience,
-section.education,
-section.skills,
-section.programming-languages {
-	grid-column: 1 / span 2;
 }
 
 .lang-list,
@@ -116,41 +108,10 @@ section.programming-languages {
 }
 
 .skills-list {
-	column-count: 2;
-	column-gap: 40px;
-}
-
-@media screen and (min-width: 1024px) {
-	.grid-not-supported h1 {
-		font-size: 2rem;
-	}
-	.grid-not-supported ul li {
-		display: inline-block;
-		margin-right: 0.5em;
-	}
-	.grid-2col section {
-		padding: 0 20px;
-	}
-	section.skills {
-		grid-column: 2 / span 1;
-		grid-row: 2 / span 1;
-	}
-	section.experience {
-		grid-column: 1 / span 1;
-		grid-row: 1 / span 4;
-	}
-	section.programming-languages {
-		grid-column: 2 / span 1;
-	}
-	section.experience {
-		grid-column: 1 / span 1;
-	}
-	section.education,
-	section.skills,
-	section.programming-languages,
-	section.hobbies {
-		grid-column: 2 / span 1;
-	}
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 0 40px;
+	width: 100%;
 }
 
 a,
@@ -159,49 +120,60 @@ a:visited {
 	color: var(--color-blue);
 }
 
-@media screen and (min-width: 1024px) {
-	.grid-not-supported h1 {
-		font-size: 2rem;
-	}
-	.grid-not-supported ul li {
-		display: inline-block;
-		margin-right: 0.5em;
+
+.experience .experience-list {
+	display: grid;
+	grid-template-columns: calc(50% - 50px) calc(50% - 50px);
+	grid-template-rows: 25% 25% 25% 25%;
+	grid-auto-columns: 1fr 1fr;
+	grid-auto-flow: column;
+	grid-gap: 40px;
+	width: 100%;
+}
+
+.work-exp {
+	width: 100%;
+}
+
+.work-exp li {
+	width: 100%;
+}
+
+.work-exp.pluralsight {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 3;
+}
+
+.work-exp.digital-artisans {
+	grid-column: 2 / span 2;
+	grid-row: auto / span 1;
+}
+
+.work-exp.netnumber {
+	grid-column: 2 / span 1;
+	grid-row: auto / span 1
+}
+
+.work-exp.ibm {
+	grid-column: 2 / span 1;
+	grid-row: auto / span 1;
+}
+@media screen {
+	main.resume {
+		max-width: 1600px;
+		margin: 0 auto;
 	}
 }
 
 @media print {
 	html {
-		font-size: 12px;
+		font-size: 9pt;
 	}
-	.grid-not-supported h1 {
-		font-size: 2rem;
-	}
-	.grid-not-supported ul li {
-		display: inline-block;
-		margin-right: 0.5em;
-	}
-	section.skills {
-		grid-column: 2 / span 1;
-		grid-row: 2 / span 1;
-	}
-	section.experience {
-		grid-column: 1 / span 1;
-		grid-row: 1 / span 6;
-	}
-	section.programming-languages {
-		grid-column: 2 / span 1;
-	}
-	section.programming-languages ul {
-		columns: 2;
-	}
-	section.experience {
-		grid-column: 1 / span 1;
+	.body-wrap {
+		max-height: 10.625in;
+		max-width: 8.125in;
+		padding: 0 20px;
 	}
 
-	section.education,
-	section.skills,
-	section.programming-languages,
-	section.hobbies {
-		grid-column: 2 / span 1;
-	}
+	
 }
